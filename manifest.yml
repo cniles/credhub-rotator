@@ -1,0 +1,8 @@
+applications:
+- name: demo
+  memory: 1G
+  path: build/libs/demo-0.0.1-SNAPSHOT.jar
+  buildpack: java_buildpack_offline
+  env:
+    SPRING_CREDHUB_URL: https://credhub.service.cf.internal:8844
+    JBP_CONFIG_OPEN_JDK_JRE: '{ jre: { version: 21.+ }}'
